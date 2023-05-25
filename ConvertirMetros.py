@@ -18,7 +18,7 @@ class Convertir(tk.Frame):
         self.Resultado.configure(text=str(Cent))
 Ventana=tk.Tk()
 Ventana.title("Convertidor")
-Ventana.configure(width=600,height=600)
+Ventana.configure(width=600,height=500)
 Conver1=Convertir(Ventana,30)
 Conver1=Convertir(Ventana,200)
 Conver1=Convertir(Ventana,300)
