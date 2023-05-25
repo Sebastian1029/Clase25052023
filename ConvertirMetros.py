@@ -12,7 +12,7 @@ class Convertir(tk.Frame):
         self.Boton.place(x=340,y=posy)
         self.Resultado=ttk.Label(parent
                     ,font=('Algerial',20))
-        self.Resultado.place(x=20,y=posy+80)
+        self.Resultado.place(x=20,y=posy+82)
     def Accion(self):
         Cent=float(self.Metros.get())*100
         self.Resultado.configure(text=str(Cent))
