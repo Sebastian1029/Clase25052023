@@ -7,7 +7,7 @@ class Convertir(tk.Frame):
                ,font=('Algerial',18))
         self.Guia.place(x=20,y=posy)
         self.Metros=ttk.Entry(parent,font=('Algerial',20))
-        self.Metros.place(x=220,y=posy,width=100)
+        self.Metros.place(x=0,y=posy,width=100)
         self.Boton=ttk.Button(parent,command=self.Accion)
         self.Boton.place(x=340,y=posy)
         self.Resultado=ttk.Label(parent
