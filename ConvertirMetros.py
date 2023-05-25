@@ -1,25 +1,48 @@
-import tkinter as tk
-from tkinter import ttk
-class Convertir(tk.Frame):
-    def __init__(self,parent,posy):
-        super().__init__(parent)
-        self.Guia=ttk.Label(parent,text="Ingrese metros"
-               ,font=('Algerial',18))
-        self.Guia.place(x=20,y=posy)
-        self.Metros=ttk.Entry(parent,font=('Algerial',20))
-        self.Metros.place(x=220,y=posy,width=100)
-        self.Boton=ttk.Button(parent,command=self.Accion)
-        self.Boton.place(x=340,y=posy)
-        self.Resultado=ttk.Label(parent
-                    ,font=('Algerial',20))
-        self.Resultado.place(x=20,y=posy+82)
-    def Accion(self):
-        Cent=float(self.Metros.get())*100
-        self.Resultado.configure(text=str(Cent))
-Ventana=tk.Tk()
-Ventana.title("Convertidor")
-Ventana.configure(width=600,height=600)
-Conver1=Convertir(Ventana,30)
-Conver1=Convertir(Ventana,200)
-Conver1=Convertir(Ventana,300)
-Ventana.mainloop()
+import pygame
+
+# Initialize Pygame
+pygame.init()
+
+# Set up the game window
+window = pygame.display.set_mode((640, 640))
+
+# Set the title of the window
+pygame.display.set_caption("Chess")
+
+# Set up the game board
+board = pygame.Surface((640, 640))
+board.fill((255, 255, 255))
+
+# Draw the chess board
+for i in range(8):
+    for j in range(8):
+        if (i + j) % 2 == 0:
+            pygame.draw.rect(board, (0, 0, 0), (i * 80, j * 80, 80, 80))
+        else:
+            pygame.draw.rect(board, (255, 255, 255), (i * 80, j * 80, 80, 80))
+
+# Set up the pieces
+pieces = pygame.sprite.Group()
+
+# Add the pieces to the group
+# ...
+
+# Game loop
+running = True
+while running:
+    # Handle events
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+    # Draw the game board
+    window.blit(board, (0, 0))
+
+    # Draw the pieces
+    pieces.draw(window)
+
+    # Update the display
+    pygame.display.update()
+
+# Quit Pygame
+pygame.quit()
