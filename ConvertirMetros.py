@@ -19,7 +19,7 @@ class Convertir(tk.Frame):
 Ventana=tk.Tk()
 Ventana.title("Convertidor")
 Ventana.configure(width=600,height=600)
-Conver1=Convertir(Ventana,30)
+Conver1=Convertir(Ventana,300)
 Conver1=Convertir(Ventana,200)
 Conver1=Convertir(Ventana,300)
 Ventana.mainloop()
