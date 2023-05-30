@@ -4,7 +4,7 @@ class Convertir(tk.Frame):
     def __init__(self,parent,posy):
         super().__init__(parent)
         self.Guia=ttk.Label(parent,text="Ingrese metros"
-               ,font=('Algerial',18))
+               ,font=('Algerial',14))
         self.Guia.place(x=20,y=posy)
         self.Metros=ttk.Entry(parent,font=('Algerial',20))
         self.Metros.place(x=220,y=posy,width=100)
